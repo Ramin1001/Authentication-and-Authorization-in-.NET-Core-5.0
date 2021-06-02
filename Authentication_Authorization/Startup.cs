@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +25,10 @@ namespace Authentication_Authorization
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options=> {
+                    options.LoginPath = "/login";
+                }); // manually
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,7 +48,7 @@ namespace Authentication_Authorization
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication(); // manualy
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

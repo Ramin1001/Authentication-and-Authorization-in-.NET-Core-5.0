@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NUNMWs8hcO9fRtufS3kvKyWdsTCUjoKiNL7z2uxCPRtqzCUXnuZ0sW8rL0+AMKqAg0TBHNHbIRMmYBMOR4AbaA==",
+  "dgSpecHash": "r7B3ahK1JULiVo+doTeQ+xRxbrUpyIw4NHJGaKSPDtYqIGOaveCYhWnR4bOJj/YJkY1V2wqsIeg1PjEO53F+VQ==",
   "success": true,
-  "projectFilePath": "D:\\Yazilmis proqramlar\\ASP.NET Core 5 Authentication and Authoriztion(author-English)\\Authentication_Authorization_Core_5\\Authentication_Authorization\\Authentication_Authorization.csproj",
+  "projectFilePath": "D:\\Yazilmis proqramlar\\ASP.NET Core 5 Authentication and Authoriztion(author-English)\\Authentication_Authorization\\Authentication_Authorization.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RAMO1378\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.5\\microsoft.aspnetcore.mvc.razor.extensions.5.0.5.nupkg.sha512",
     "C:\\Users\\RAMO1378\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\5.0.5\\microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.5.nupkg.sha512",

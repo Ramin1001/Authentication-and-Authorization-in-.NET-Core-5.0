@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Yazilmis proqramlar\\ASP.NET Core 5 Authentication and Authoriztion(author-English)\\Authentication_Authorization_Core_5\\Authentication_Authorization\\Authentication_Authorization.csproj": {}
+    "D:\\Yazilmis proqramlar\\ASP.NET Core 5 Authentication and Authoriztion(author-English)\\Authentication_Authorization\\Authentication_Authorization.csproj": {}
   },
   "projects": {
-    "D:\\Yazilmis proqramlar\\ASP.NET Core 5 Authentication and Authoriztion(author-English)\\Authentication_Authorization_Core_5\\Authentication_Authorization\\Authentication_Authorization.csproj": {
+    "D:\\Yazilmis proqramlar\\ASP.NET Core 5 Authentication and Authoriztion(author-English)\\Authentication_Authorization\\Authentication_Authorization.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Yazilmis proqramlar\\ASP.NET Core 5 Authentication and Authoriztion(author-English)\\Authentication_Authorization_Core_5\\Authentication_Authorization\\Authentication_Authorization.csproj",
+        "projectUniqueName": "D:\\Yazilmis proqramlar\\ASP.NET Core 5 Authentication and Authoriztion(author-English)\\Authentication_Authorization\\Authentication_Authorization.csproj",
         "projectName": "Authentication_Authorization",
-        "projectPath": "D:\\Yazilmis proqramlar\\ASP.NET Core 5 Authentication and Authoriztion(author-English)\\Authentication_Authorization_Core_5\\Authentication_Authorization\\Authentication_Authorization.csproj",
+        "projectPath": "D:\\Yazilmis proqramlar\\ASP.NET Core 5 Authentication and Authoriztion(author-English)\\Authentication_Authorization\\Authentication_Authorization.csproj",
         "packagesPath": "C:\\Users\\RAMO1378\\.nuget\\packages\\",
-        "outputPath": "D:\\Yazilmis proqramlar\\ASP.NET Core 5 Authentication and Authoriztion(author-English)\\Authentication_Authorization_Core_5\\Authentication_Authorization\\obj\\",
+        "outputPath": "D:\\Yazilmis proqramlar\\ASP.NET Core 5 Authentication and Authoriztion(author-English)\\Authentication_Authorization\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
