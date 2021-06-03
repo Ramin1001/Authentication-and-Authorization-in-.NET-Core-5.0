@@ -32,7 +32,15 @@ namespace Authentication_Authorization.Controllers
             return View();
         }
 
-        [Authorize]
+        [HttpGet("denied")]
+        public IActionResult Denied()
+        {
+            return View();
+        }
+
+
+
+        [Authorize(Roles ="Admin")]
         public IActionResult Secured()
         {
             return View();
@@ -57,6 +65,7 @@ namespace Authentication_Authorization.Controllers
                 var claims = new List<Claim>();
                 claims.Add(new Claim("username", username));
                 claims.Add(new Claim(ClaimTypes.NameIdentifier, username));
+                claims.Add(new Claim(ClaimTypes.Name, "Ramin Agayev")); // we add this temporary. It have to come form DB.
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
                 await HttpContext.SignInAsync(claimsPrincipal);

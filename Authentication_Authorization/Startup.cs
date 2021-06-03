@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Authentication_Authorization
@@ -25,9 +26,37 @@ namespace Authentication_Authorization
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme) // dded manualy
                 .AddCookie(options=> {
                     options.LoginPath = "/login";
+                    options.AccessDeniedPath = "/denied"; // manually. If user do not pass authentication he redirect to denied page 
+                    options.Events = new CookieAuthenticationEvents()
+                    {
+                        OnSigningIn = async context =>
+                        {
+                            // manually
+                            // here we check name user and if it's corresponds to his name we add role Admin to him
+                            var principal = context.Principal;
+                            if(principal.HasClaim(c=> c.Type == ClaimTypes.NameIdentifier))
+                            {
+                                if(principal.Claims.FirstOrDefault(c=> c.Type == ClaimTypes.NameIdentifier).Value == "bob")
+                                {
+                                    var claimsIdentity = principal.Identity as ClaimsIdentity;
+                                    claimsIdentity.AddClaim(new Claim(ClaimTypes.Role, "Admin"));
+                                }
+                            }
+
+                            await Task.CompletedTask;
+                        },
+                        OnSignedIn = async context =>
+                          {
+                              await Task.CompletedTask;
+                          },
+                        OnValidatePrincipal = async context =>
+                        {
+                            await Task.CompletedTask;
+                        }
+                    };
                 }); // manually
         }
 
