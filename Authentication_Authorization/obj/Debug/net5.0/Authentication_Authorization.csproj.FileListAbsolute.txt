@@ -716,3 +716,11 @@ D:\Yazilmis proqramlar\ASP.NET Core 5 Authentication and Authoriztion(author-Eng
 D:\Yazilmis proqramlar\ASP.NET Core 5 Authentication and Authoriztion(author-English)\Authentication_Authorization\obj\Debug\net5.0\Authentication_Authorization.genruntimeconfig.cache
 D:\Yazilmis proqramlar\ASP.NET Core 5 Authentication and Authoriztion(author-English)\Authentication_Authorization\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs
 D:\Yazilmis proqramlar\ASP.NET Core 5 Authentication and Authoriztion(author-English)\Authentication_Authorization\obj\Debug\net5.0\Razor\Views\Home\Denied.cshtml.g.cs
+D:\Yazilmis proqramlar\ASP.NET Core 5 Authentication and Authoriztion(author-English)\Authentication_Authorization\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Google.dll
+D:\Yazilmis proqramlar\ASP.NET Core 5 Authentication and Authoriztion(author-English)\Authentication_Authorization\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+D:\Yazilmis proqramlar\ASP.NET Core 5 Authentication and Authoriztion(author-English)\Authentication_Authorization\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Yazilmis proqramlar\ASP.NET Core 5 Authentication and Authoriztion(author-English)\Authentication_Authorization\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\Yazilmis proqramlar\ASP.NET Core 5 Authentication and Authoriztion(author-English)\Authentication_Authorization\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\Yazilmis proqramlar\ASP.NET Core 5 Authentication and Authoriztion(author-English)\Authentication_Authorization\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Yazilmis proqramlar\ASP.NET Core 5 Authentication and Authoriztion(author-English)\Authentication_Authorization\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\Yazilmis proqramlar\ASP.NET Core 5 Authentication and Authoriztion(author-English)\Authentication_Authorization\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll

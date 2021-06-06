@@ -39,12 +39,26 @@ namespace Authentication_Authorization.Controllers
         }
 
 
-
+        // variant 1 (if we don't need tokens)
         [Authorize(Roles ="Admin")]
         public IActionResult Secured()
         {
             return View();
         }
+
+        // variant 2 (if we need tokens)
+
+        //[Authorize(Roles ="Admin")]
+        //public async Task<IActionResult>  Secured()
+        //{
+        //    var idToken = await HttpContext.GetTokenAsync("id_token"); 
+
+        //    return View();
+        //}
+
+
+
+
 
         [HttpGet("login")]
         public IActionResult Login(string returnUrl)
@@ -82,7 +96,9 @@ namespace Authentication_Authorization.Controllers
         {
             await HttpContext.SignOutAsync();
 
-            return Redirect("/");
+            //return Redirect("/");
+
+            return Redirect("https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=https://localhost:44356"); // for security reason
         }
 
 
