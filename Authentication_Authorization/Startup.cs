@@ -31,7 +31,7 @@ namespace Authentication_Authorization
             services.AddAuthentication(options =>
             { // adding for google ////////////////
                 options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = "GoogleOpenID";// variant 1   (GoogleDefaults.AuthenticationScheme;) variant 2
+                options.DefaultChallengeScheme = "okta"; // // if only google ("GoogleOpenID") variant 1   (GoogleDefaults.AuthenticationScheme;) variant 2
                 ///////////////////////////////////////////////////////////////////////////////////////
             })
                 .AddCookie(options => // added manualy for cookies
@@ -72,7 +72,7 @@ namespace Authentication_Authorization
                     options.ClientId = "937054166175-t2jjosmno74poo8nmm14ktkbinl6n1ns.apps.googleusercontent.com";
                     options.ClientSecret = "nOM7CwXzeQqCyJlPT7CakqWj";
                     options.CallbackPath = "/Authentication_Authorization";
-                    //options.AuthorizationEndpoint = "?prompt=consern"; // if you can enter to google account directly. It's give right for choose
+                    options.SignedOutCallbackPath = "/google-gignout"; //"?prompt=consern"; // if you can enter to google account directly. It's give right for choose
                     //options.SaveTokens = true; // if we need tokens
                     options.Events = new OpenIdConnectEvents()
                     {
@@ -82,10 +82,19 @@ namespace Authentication_Authorization
                             {
                                 var claim = new Claim(ClaimTypes.Role, "Admin");
                                 var claimIdentity = context.Principal.Identity as ClaimsIdentity;
-                                claimIdentity.AddClaim(claim);  
+                                claimIdentity.AddClaim(claim);
                             }
                         }
                     };
+                }).AddOpenIdConnect("okta", options =>
+                {
+                    options.Authority = "https://dev-39686424.okta.com";
+                    options.ClientId = "0oawhtsugGpwVBNPg5d6";
+                    options.ClientSecret = "QdTsA_45EqHuPgTSTR3-3nyGGPFRuW5Eai3S1YOw";
+                    options.CallbackPath = "/okta-Authentication_Authorization";
+                    options.ResponseType = "code";
+
+
                 });
                 //.AddGoogle(options => // connect with google (variant 1) // manualy
                 //{
